@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Your Points</title>
+    <link rel="stylesheet" href="styles.css">
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://example.com/path-to-google-students-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.button {
+            width: 60%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <a href="index.html" class="button">Back to Home</a>
+        <h1>View Your Points</h1>
+        <form id="viewPointsForm">
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" onclick="viewPoints()">View</button>
+        </form>
+    </div>
+    <script>
+  function viewPoints() {
+    const fullName = document.getElementById('fullName').value;
+    const password = document.getElementById('password').value;
+
+    // Simple validation (you may add more complex validation and security)
+    if (fullName === "" || password === "") {
+        alert("Please enter both your full name and password.");
+        return;
+    }
+
+    // Process the form data (e.g., send to a server or check locally)
+    // For now, just display an alert as a placeholder
+    alert(`Full Name: ${fullName}\nPassword: ${password}`);
+    
+}
+  </script>
+</body>
+</html>
